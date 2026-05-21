@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лаб 10 — VS | Wooting 80HE</title>
+  <meta name="description" content="Лабораторийн ажил 10: VS — iframe дотор.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="dot"></span><span>Wooting 80HE<small>Hall-Effect Keyboard</small></span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+      <nav class="nav-links">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="features.html" data-nav="features">Features</a>
+        <a href="specs.html" data-nav="specs">Specs &amp; Gallery</a>
+        <a href="reviews.html" data-nav="reviews">Reviews</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+        <div class="nav-item">
+          <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Лаборатори <span class="caret">▾</span></button>
+          <div class="dropdown" role="menu">
+            <a href="lab9.html"  data-nav="lab9"  role="menuitem"><b>Лаб 9</b><span>VS Game</span></a>
+            <a href="lab10.html" data-nav="lab10" role="menuitem"><b>Лаб 10</b><span>VS</span></a>
+            <a href="lab14.html" data-nav="lab14" role="menuitem"><b>Лаб 14</b><span>Зургийн цомог</span></a>
+          </div>
+        </div>
+        <a class="btn btn--primary nav-cta" href="contact.html">Order now</a>
+      </nav>
+    </div>
+  </header>
+  <div class="loadbar"></div>
+
+  <main id="app" data-page="lab10">
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Лаборатори · Лаб 10</span>
+          <h2>VS</h2>
+          <p class="lead">Лабораторийн ажил доорх iframe дотор ажиллаж байна. Доор тайлбар видеогоо байршуулна.</p>
+        </div>
+
+        <div class="lab-frame reveal">
+          <iframe src="weblab10/index.html" title="Лаб 10 — VS" loading="lazy"></iframe>
+        </div>
+        <div class="lab-actions reveal">
+          <a class="btn btn--ghost" href="weblab10/index.html" target="_blank" rel="noopener">Шинэ цонхонд нээх ↗</a>
+        </div>
+
+        <div class="lab-video reveal">
+          <h3>Тайлбар видео</h3>
+          <div class="video-embed">
+            <!-- TODO: paste your YouTube/Facebook EMBED link in the iframe src below, then delete the placeholder div.
+                 YouTube example: <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Лаб 10 тайлбар" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">▶</div>
+              <b>Тайлбар видеогоо энд оруулна</b>
+              YouTube эсвэл Facebook дээрх видеоныхоо embed холбоосыг код доторх iframe-д тавина уу.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><span class="dot"></span><span>Wooting 80HE</span></a>
+          <p>An independent student showcase of the Wooting 80HE analog keyboard, built for the F.IT202 web design course.</p>
+        </div>
+        <div><h4>Pages</h4>
+          <a href="index.html">Home</a><br><a href="features.html">Features</a><br><a href="specs.html">Specs &amp; Gallery</a><br><a href="reviews.html">Reviews</a><br><a href="contact.html">Contact</a>
+        </div>
+        <div><h4>Лаборатори</h4>
+          <a href="lab7.html">Лаб 7 — Банхарнаторын аялал</a><br><a href="lab9.html">Лаб 9 — VS Game</a><br><a href="lab10.html">Лаб 10 — VS</a><br><a href="lab14.html">Лаб 14 — Зургийн цомог</a>
+        </div>
+        <div><h4>Project</h4><p style="margin:0;">F.IT202 – Вэб зохиомж<br>Бие даалт 2: Хөдөлгөөнт вэб хуудас</p></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Student project · Not affiliated with Wooting. Product information © Wooting.</span>
+        <span>Student code: <span class="code">B19XXXXXXX</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top">↑</button>
+  <script src="js/app.js"></script>
+</body>
+</html>

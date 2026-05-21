@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаборатори 14 - Зургийн цомог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Зургийн цомог</h2>
+
+<div class="container">
+
+    <div class="mySlides active">
+        <div class="numbertext">1 / 6</div>
+        <img src="pic1.png" alt="The Woods">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="pic2.png" alt="Cinque Terre">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="pic3.png" alt="Mountains and fjords">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="pic4.png" alt="Northern Lights">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="pic5.png" alt="Nature and sunrise">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="pic6.png" alt="Snowy Mountains">
+    </div>
+
+    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+    <button class="next" onclick="plusSlides(1)">&#10095;</button>
+
+    <div class="caption-container">
+        <p id="caption">The Woods</p>
+    </div>
+
+    <div class="row">
+        <div class="column active" onclick="currentSlide(1)">
+            <img src="image/jijig-zurag1.jpg" alt="The Woods">
+        </div>
+        <div class="column" onclick="currentSlide(2)">
+            <img src="image/jijig-zurag2.jpg" alt="Cinque Terre">
+        </div>
+        <div class="column" onclick="currentSlide(3)">
+            <img src="image/jijig-zurag3.jpg" alt="Mountains and fjords">
+        </div>
+        <div class="column" onclick="currentSlide(4)">
+            <img src="image/jijig-zurag4.jpg" alt="Northern Lights">
+        </div>
+        <div class="column" onclick="currentSlide(5)">
+            <img src="image/jijig-zurag5.jpg" alt="Nature and sunrise">
+        </div>
+        <div class="column" onclick="currentSlide(6)">
+            <img src="image/jijig-zurag6.jpg" alt="Snowy Mountains">
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

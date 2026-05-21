@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features — Wooting 80HE</title>
+  <meta name="description" content="Rapid Trigger, adjustable actuation, analog input, Rappy Snappy and more — the features that make the Wooting 80HE.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="dot"></span><span>Wooting 80HE<small>Hall-Effect Keyboard</small></span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+      <nav class="nav-links">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="features.html" data-nav="features">Features</a>
+        <a href="specs.html" data-nav="specs">Specs &amp; Gallery</a>
+        <a href="reviews.html" data-nav="reviews">Reviews</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+        <div class="nav-item">
+          <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Лаборатори <span class="caret">▾</span></button>
+          <div class="dropdown" role="menu">
+            <a href="lab9.html"  data-nav="lab9"  role="menuitem"><b>Лаб 9</b><span>VS Game</span></a>
+            <a href="lab10.html" data-nav="lab10" role="menuitem"><b>Лаб 10</b><span>VS</span></a>
+            <a href="lab14.html" data-nav="lab14" role="menuitem"><b>Лаб 14</b><span>Зургийн цомог</span></a>
+          </div>
+        </div>
+        <a class="btn btn--primary nav-cta" href="contact.html">Order now</a>
+      </nav>
+    </div>
+  </header>
+  <div class="loadbar"></div>
+
+  <main id="app" data-page="features">
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Features</span>
+          <h2>One keyboard, a whole toolbox</h2>
+          <p class="lead" style="margin:14px auto 0;">Hall-effect switches make these features possible. Use the tabs to explore what each one actually does.</p>
+        </div>
+
+        <!-- ===== TAB component (driven by initTabs in app.js) ===== -->
+        <div class="tabs reveal">
+          <div class="tablist" role="tablist" aria-label="Wooting 80HE features">
+            <button class="tab" role="tab" aria-selected="false">Rapid Trigger</button>
+            <button class="tab" role="tab" aria-selected="false">Adjustable Actuation</button>
+            <button class="tab" role="tab" aria-selected="false">Analog Input</button>
+            <button class="tab" role="tab" aria-selected="false">Rappy Snappy &amp; SOCD</button>
+            <button class="tab" role="tab" aria-selected="false">DKS &amp; Macros</button>
+          </div>
+
+          <div class="tabpanels">
+            <div class="tabpanel" role="tabpanel">
+              <div class="tabpanel-inner">
+                <div>
+                  <h3>Rapid Trigger</h3>
+                  <p>The feature Wooting pioneered, and the one that changed the peripheral landscape. Instead of waiting for a key to travel back past a fixed reset point, Rapid Trigger resets and re-activates a key the instant you change direction.</p>
+                  <ul class="feature-list">
+                    <li>Repeat inputs in rapid succession with no perceived delay</li>
+                    <li>Razor-sharp counter-strafing in tactical shooters</li>
+                    <li>Sensitivity is fully adjustable per key in Wootility</li>
+                  </ul>
+                </div>
+                <div class="tab-figure"><div><div class="big">0 ms</div><div class="cap">perceived reset delay</div></div></div>
+              </div>
+            </div>
+
+            <div class="tabpanel" role="tabpanel">
+              <div class="tabpanel-inner">
+                <div>
+                  <h3>Adjustable Actuation</h3>
+                  <p>You decide how far a key must travel before it registers. Set a hair-trigger 0.1&nbsp;mm for movement keys and a deliberate 4.0&nbsp;mm for keys you don't want to fire by accident — all configurable per key.</p>
+                  <ul class="feature-list">
+                    <li>0.1&nbsp;mm precision across the full travel range</li>
+                    <li>Quick presets: 0.1, 0.5, 1, 2, 3 or 4&nbsp;mm</li>
+                    <li>Different actuation points for different keys</li>
+                  </ul>
+                </div>
+                <div class="tab-figure"><div><div class="big">0.1–4.0</div><div class="cap">mm actuation range</div></div></div>
+              </div>
+            </div>
+
+            <div class="tabpanel" role="tabpanel">
+              <div class="tabpanel-inner">
+                <div>
+                  <h3>The Power of Analog</h3>
+                  <p>An analog keypress isn't binary — the keyboard tracks exactly how far you press. Activate analog movement and your WASD keys gain variable input, so you can walk, jog or sprint at precisely the speed you choose.</p>
+                  <ul class="feature-list">
+                    <li>Variable movement like an analog stick</li>
+                    <li>Feather the throttle and brake in racing games</li>
+                    <li>Backed by Wooting's open Analog SDK</li>
+                  </ul>
+                </div>
+                <div class="tab-figure"><div><div class="big">∞</div><div class="cap">degrees of input, not just on/off</div></div></div>
+              </div>
+            </div>
+
+            <div class="tabpanel" role="tabpanel">
+              <div class="tabpanel-inner">
+                <div>
+                  <h3>Rappy Snappy &amp; Snappy Tappy (SOCD)</h3>
+                  <p>Rappy Snappy lets you choose two keys that are never active at the same time — the key pressed deeper stays active. Snappy Tappy (SOCD) is similar, but lets you decide how the winner is chosen, for example prioritising the key pressed last.</p>
+                  <ul class="feature-list">
+                    <li>Clean opposing-direction inputs (A vs D)</li>
+                    <li>Choose "deeper wins" or "last input wins"</li>
+                    <li>Bottom out both keys to override</li>
+                  </ul>
+                </div>
+                <div class="tab-figure"><div><div class="big">A ⇄ D</div><div class="cap">no conflicting inputs</div></div></div>
+              </div>
+            </div>
+
+            <div class="tabpanel" role="tabpanel">
+              <div class="tabpanel-inner">
+                <div>
+                  <h3>DKS, Mod-Tap &amp; Toggle</h3>
+                  <p>Dynamic Keystroke (DKS) maps multiple actions to a single key — one on a half-press, another on a full press, and more on release. Add Mod-Tap (tap for A, hold for B) and Toggle keys, and a single key can do a lot.</p>
+                  <ul class="feature-list">
+                    <li>Up to four actions bound to one key with DKS</li>
+                    <li>Mod-Tap adds a second action to any key</li>
+                    <li>Toggle a held action, like crouch, with one tap</li>
+                  </ul>
+                </div>
+                <div class="tab-figure"><div><div class="big">4-in-1</div><div class="cap">actions per key with DKS</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Software</span>
+          <h2>All tuned in Wootility</h2>
+          <p class="lead" style="margin:14px auto 0;">Configure performance features and RGB fast, then fine-tune every detail. Use it as an app or right in your browser, with up to four onboard profiles saved on the keyboard itself.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card reveal"><h3>Intuitive &amp; powerful</h3><p>Instant setup when you want it, deep per-key control when you need it.</p></article>
+          <article class="card reveal"><h3>In-app or in-browser</h3><p>Wootility runs anywhere — no install required to make a quick change.</p></article>
+          <article class="card reveal"><h3>Onboard profiles</h3><p>Up to four profiles live on the keyboard and load instantly on any device.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>See it in every colourway</h2>
+          <p>Browse the case styles and the full technical specification of the 80HE.</p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a class="btn btn--primary" href="specs.html">Specs &amp; gallery</a>
+            <a class="btn btn--light" href="contact.html">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><span class="dot"></span><span>Wooting 80HE</span></a>
+          <p>An independent student showcase of the Wooting 80HE analog keyboard, built for the F.IT202 web design course.</p>
+        </div>
+        <div><h4>Pages</h4>
+          <a href="index.html">Home</a><br><a href="features.html">Features</a><br><a href="specs.html">Specs &amp; Gallery</a><br><a href="reviews.html">Reviews</a><br><a href="contact.html">Contact</a>
+        </div>
+        <div><h4>Лаборатори</h4>
+          <a href="lab7.html">Лаб 7 — Банхарнаторын аялал</a><br><a href="lab9.html">Лаб 9 — VS Game</a><br><a href="lab10.html">Лаб 10 — VS</a><br><a href="lab14.html">Лаб 14 — Зургийн цомог</a>
+        </div>
+        <div><h4>Project</h4><p style="margin:0;">F.IT202 – Вэб зохиомж<br>Бие даалт 2: Хөдөлгөөнт вэб хуудас</p></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Student project · Not affiliated with Wooting. Product information © Wooting.</span>
+        <span>Student code: <span class="code">B19XXXXXXX</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top">↑</button>
+  <script src="js/app.js"></script>
+</body>
+</html>

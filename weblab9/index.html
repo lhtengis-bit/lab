@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+    <meta charset="UTF-8">
+    <title> VS Game </title>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; font-family: sans-serif; }
+        #left, #right { position: absolute; top: 0; bottom: 0; cursor: pointer; transition: width 0.2s ease-out; }
+        #left { left: 0; color: #eee; background-color: #eee; }
+        #right { right: 0; color: #900; background-color: #900; }
+        
+        #left div, #right div, #vs {
+            position: absolute; top: 50%; left: 50%;
+            margin: -50px 0 0 -50px; width: 100px; height: 100px;
+            text-align: center; font-weight: bold;
+            font-size: 40px; line-height: 100px; border-radius: 50px; 
+        }
+   
+        #left div { background-color: #900; }
+        #right div { background-color: #eee; }
+        
+        #vs { 
+            background-color: #000; color: #fff; 
+            box-shadow: 2px 2px 5px #000; z-index: 10;
+            transition: left 0.2s ease-out;
+        } 
+    </style>
+</head>
+<body>
+    <div id="left" onclick="left_click()"> <div>0</div> </div>
+    <div id="right" onclick="right_click()"> <div>0</div> </div>
+    <div id="vs">VS</div>
+
+    <script>
+        var left = 0, right = 0;
+        var leftDiv = document.getElementById("left");
+        var rightDiv = document.getElementById("right");
+        var vsDiv = document.getElementById("vs");
+
+        function refresh() {
+      
+            var leftWidth = Math.min(100, Math.max(0, 50 + (left - right) * 2)); // Хурд нэмэхийн тулд *2 үржүүлэв
+            var rightWidth = 100 - leftWidth;
+            
+            leftDiv.style.width = leftWidth + "%";
+            rightDiv.style.width = rightWidth + "%";
+            vsDiv.style.left = leftWidth + "%";
+            
+            leftDiv.firstElementChild.innerHTML = left;
+            rightDiv.firstElementChild.innerHTML = right;
+        }
+
+        function left_click() { left++; refresh(); }
+        function right_click() { right++; refresh(); }
+
+        
+        document.onkeydown = function(e) {
+            if (e.key.toLowerCase() === "l") left_click();
+            if (e.key.toLowerCase() === "r") right_click();
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лаборатори 14 - My friends album </title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 22px;
+      color: #222;
+    }
+
+    .container {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+      background: #000;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .mySlides {
+      display: none;
+      position: relative;
+    }
+    .mySlides.active {
+      display: block;
+    }
+
+    .mySlides img {
+      width: 100%;
+      max-height: 560px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 8px 14px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.45);
+      border-bottom-right-radius: 6px;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: auto;
+      padding: 14px 18px;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      background: rgba(0,0,0,0.35);
+      border: none;
+      outline: none;
+      transition: background 0.2s;
+      z-index: 10;
+    }
+    .prev { left: 0; border-radius: 0 4px 4px 0; }
+    .next { right: 0; border-radius: 4px 0 0 4px; }
+    .prev:hover, .next:hover { background: rgba(0,0,0,0.75); }
+
+    .caption-container {
+      text-align: center;
+      background: #222;
+      padding: 10px 16px;
+      color: white;
+      font-size: 14px;
+      min-height: 38px;
+    }
+
+    .row {
+      display: flex;
+      background: #111;
+      padding: 6px;
+      gap: 6px;
+    }
+
+    .column {
+      flex: 1;
+      cursor: pointer;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      transition: border-color 0.2s, opacity 0.2s;
+    }
+    .column img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      opacity: 0.55;
+      transition: opacity 0.2s;
+    }
+    .column.active {
+      border-color: #e05c3a;
+    }
+    .column.active img,
+    .column:hover img {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Elii zurag nar</h2>
+
+<div class="container">
+
+  <div class="mySlides active">
+    <div class="numbertext">1 / 6</div>
+    <img src="pic1.png" alt="The Woods">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="pic2.png" alt="Cinque Terre">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="pic3.png" alt="Mountains and fjords">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="pic4.png" alt="Northern Lights">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="pic5.png" alt="Nature and sunrise">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="pic6.png" alt="Snowy Mountains">
+  </div>
+
+  <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+  <button class="next" onclick="plusSlides(1)">&#10095;</button>
+
+  <div class="caption-container">
+    <p id="caption">The Woods</p>
+  </div>
+
+  <div class="row">
+    <div class="column active" onclick="currentSlide(1)">
+      <img src="pic1.png" alt="Jojo's pose">
+    </div>
+    <div class="column" onclick="currentSlide(2)">
+      <img src="pic2.png" alt="batsaan uyiin uuree amraa">
+    </div>
+    <div class="column" onclick="currentSlide(3)">
+      <img src="pic3.png" alt="bid 3iin harihiin omnoh eliirel">
+    </div>
+    <div class="column" onclick="currentSlide(4)">
+      <img src="pic4.png" alt="uuree amraa deer mordsonon">
+    </div>
+    <div class="column" onclick="currentSlide(5)">
+      <img src="pic5.png" alt="handsome boiiiii amraa">
+    </div>
+    <div class="column" onclick="currentSlide(6)">
+      <img src="pic6.png" alt="hen 2 veee?">
+    </div>
+  </div>
+
+</div>
+
+<script>
+  var slideIndex = 1;
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var slides = document.getElementsByClassName("mySlides");
+    var thumbs = document.getElementsByClassName("column");
+    var caption = document.getElementById("caption");
+
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("active");
+    }
+
+    for (var i = 0; i < thumbs.length; i++) {
+      thumbs[i].classList.remove("active");
+    }
+
+    slides[slideIndex - 1].classList.add("active");
+    thumbs[slideIndex - 1].classList.add("active");
+
+    var img = thumbs[slideIndex - 1].querySelector("img");
+    caption.textContent = img ? img.alt : "";
+  }
+
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "ArrowLeft")  plusSlides(-1);
+    if (e.key === "ArrowRight") plusSlides(1);
+  });
+</script>
+
+</body>
+</html>

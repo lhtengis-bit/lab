@@ -1,0 +1,156 @@
+/* Ерөнхий тохиргоо */
+:root {
+    --sky: #050a18;
+    --hill-1: #1b3022;
+    --hill-2: #2d5a27;
+    --scarf-red: #ff4757;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+/* Дэлгэцийн хүрээ */
+.viewport {
+    position: relative;
+    width: 900px;
+    height: 400px;
+    background: var(--sky);
+    overflow: hidden;
+    border: 5px solid #333;
+    border-radius: 20px;
+}
+
+.title {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    text-align: center;
+    color: #add8e6;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 3px;
+    z-index: 100;
+}
+
+/* Хөдөлгөөнт арын фон */
+.layer {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+
+.stars {
+    background-image: radial-gradient(1px 1px at 20px 30px, #fff, transparent);
+    background-size: 150px 150px;
+    animation: slide 60s linear infinite;
+}
+
+.hills-far {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path d="M0 100 Q 250 10 500 100 T 1000 100 V 100 H 0 Z" fill="%231b3022"/></svg>');
+    background-size: 1000px 100px;
+    bottom: 30px;
+    animation: slide 20s linear infinite;
+}
+
+.hills-near {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path d="M0 100 Q 150 20 300 100 T 600 100 T 900 100 T 1000 100 V 100 H 0 Z" fill="%232d5a27"/></svg>');
+    background-size: 800px 80px;
+    bottom: 10px;
+    animation: slide 8s linear infinite;
+}
+
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Мотоцикль болон чичиргээ */
+.bike-wrapper {
+    position: absolute;
+    bottom: 35px;
+    left: 100px;
+    width: 150px;
+    height: 100px;
+    z-index: 50;
+    animation: shake 0.1s infinite alternate;
+}
+
+@keyframes shake {
+    from { transform: translateY(0); }
+    to { transform: translateY(-3px); }
+}
+
+/* Дугуй эргэх хөдөлгөөн */
+.wheel {
+    position: absolute;
+    bottom: 0;
+    width: 45px;
+    height: 45px;
+    background: radial-gradient(circle, #444 30%, #111 70%);
+    border: 3px dashed #777;
+    border-radius: 50%;
+    animation: spin 0.3s linear infinite;
+}
+.front { right: 0; }
+.back { left: 0; }
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Банхар болон ороолт */
+.dog {
+    position: absolute;
+    bottom: 25px;
+    left: 40px;
+    width: 60px;
+    height: 50px;
+    background: #fff;
+    border-radius: 30px 30px 5px 5px;
+}
+
+.dog-head {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    width: 40px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.scarf {
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    width: 35px;
+    height: 8px;
+    background: var(--scarf-red);
+    border-radius: 5px;
+    animation: wave 0.2s infinite alternate;
+}
+
+@keyframes wave {
+    from { transform: rotate(-5deg); }
+    to { transform: rotate(10deg) scaleX(1.1); }
+}
+
+/* Гэрлийн тусгал */
+.headlight-beam {
+    position: absolute;
+    top: 25px;
+    left: 130px;
+    width: 250px;
+    height: 120px;
+    background: linear-gradient(to right, rgba(255,255,200,0.4), transparent);
+    clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 60%);
+    filter: blur(4px);
+}
